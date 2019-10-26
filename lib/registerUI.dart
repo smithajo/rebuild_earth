@@ -4,7 +4,7 @@ import 'regInput.dart';
 class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: <Widget>[
         Padding(
           padding:
@@ -82,30 +82,7 @@ class Register extends StatelessWidget {
                 ),
               ],
             ),
-            Column(
-          children: <Widget>[
-            ///holds email header and inputField
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Stack(
-                  
-                  children: <Widget>[
-                    InputWidget4(30.0, 0.0),
-                    Padding(
-                        padding: EdgeInsets.only(right: 50),
-                        child: Row(
-                          children: <Widget>[
-                            Expanded(
-                                child: Padding(
-                              padding: EdgeInsets.only(top: 40),
-                            )),
-                          ],
-                        ))
-                  ],
-                ),
-              ],
-            ),
+
             Column(
           children: <Widget>[
             ///holds email header and inputField
@@ -139,7 +116,7 @@ class Register extends StatelessWidget {
           ],
         )
       ],
-    )])])])]);
+    )])])]);
   }
 }
 
@@ -228,8 +205,8 @@ Widget roundedRectButton1(
 }
 
 const List<Color> signInGradients = [
-  Color(0xFF0EDED2),
-  Color(0xFF03A0FE),
+  Color(0xFFFF9945),
+  Color(0xFFFc6076),
 ];
 
 const List<Color> signUpGradients = [

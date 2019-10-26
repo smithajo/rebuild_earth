@@ -4,7 +4,7 @@ import 'register.dart';
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: <Widget>[
         Padding(
           padding:
