@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_bundle/inputWidget.dart';
+import 'package:flutter_ui_bundle/inputWidget.dart' as prefix0;
 import 'register.dart';
 class Login extends StatelessWidget {
   @override
@@ -61,7 +62,13 @@ class Login extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(bottom: 10),
             ),
-            roundedRectButton("Login", signInGradients, false),
+            
+            GestureDetector(
+              onTap:() {
+                //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>prefix0.Post()));
+              },
+            child:  roundedRectButton("Login", signInGradients, false),
+            ),
            GestureDetector(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyHomePage1()));

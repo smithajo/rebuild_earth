@@ -9,6 +9,9 @@ void main() {
       .then((_) {
     runApp(new MyApp());
     SystemChrome.setEnabledSystemUIOverlays([]);
+    Future<http.Response> fetchPost() {
+  return http.get('https://api.rebuildearth.org/api/token');
+}
   });
 }
 

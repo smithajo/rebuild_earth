@@ -22,6 +22,7 @@ class InputWidget1 extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
+              autofocus: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Full Name",
@@ -56,7 +57,7 @@ class InputWidget2 extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
-              
+              autofocus: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Email",
@@ -92,6 +93,7 @@ class InputWidget3 extends StatelessWidget {
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
               obscureText: true,
+              autofocus: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   
@@ -127,6 +129,7 @@ class InputWidget5 extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
+              autofocus: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Phone No.",
