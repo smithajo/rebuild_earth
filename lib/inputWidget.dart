@@ -7,21 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 
-/*class Post {
-  final String username;
-  final String password;
-
-
-  Post({this.username, this.password});
-
-  factory Post.fromJson(Map<String, dynamic> json) {
-    return Post(
-      username: json['username'],
-      password: json['password'],
-    );
-  }
-}*/
-
 class LoginWithRestfulApi extends StatefulWidget {
   @override
   _LoginWithRestfulApiState createState() => _LoginWithRestfulApiState();
@@ -162,8 +147,3 @@ class InputWidgets extends StatelessWidget {
   }
 }
 
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
-  }
