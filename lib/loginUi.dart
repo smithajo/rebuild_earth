@@ -66,7 +66,7 @@ class Login extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 50),
             ),
             roundedRectButton("Let's get Started", signInGradients, false),
-            roundedRectButton("Already have an Account?", signUpGradients, false),
+            roundedRectButton("Already Registered?", signUpGradients, false),
           ],
         )
       ],
