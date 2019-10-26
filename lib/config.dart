@@ -11,7 +11,7 @@ abstract class Config {
 
     static init() async {
 
-        String filename = (await File.fromUri(Uri.parse('.env')).exists()) ? '.env' : '.env.example';
+        String filename = (await File.fromUri(Uri.parse('.env')).exists()) ? '.env' : '.env';
         return dotenv.load(filename);
     }
 }
