@@ -2,6 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_bundle/inputWidget.dart';
 import 'package:flutter_ui_bundle/inputWidget.dart' as prefix0;
 import 'register.dart';
+class JsonUser {
+  String username;
+  String password;
+
+  JsonUser({
+    this.username, this.password,
+  });
+
+  factory JsonUser.fromJson(Map<String, dynamic> parsedJson) {
+    Map json = parsedJson['user'];
+    return JsonUser(
+      username: json['username'],
+      password: json['password'],
+    );
+  }
+}
+
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -65,7 +82,7 @@ class Login extends StatelessWidget {
             
             GestureDetector(
               onTap:() {
-                //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>prefix0.Post()));
+                
               },
             child:  roundedRectButton("Login", signInGradients, false),
             ),
