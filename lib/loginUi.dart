@@ -16,13 +16,6 @@ class Login extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(left: 40, bottom: 10),
-                  child: Text(
-                    "Email",
-                    style: TextStyle(fontSize: 16, color: Color(0xFF999A9A)),
-                  ),
-                ),
                 Stack(
                   alignment: Alignment.bottomRight,
                   children: <Widget>[
@@ -34,28 +27,31 @@ class Login extends StatelessWidget {
                             Expanded(
                                 child: Padding(
                               padding: EdgeInsets.only(top: 40),
-                              child: Text(
-                                'Enter your email id to continue...',
-                                textAlign: TextAlign.end,
-                                style: TextStyle(color: Color(0xFFA0A0A0),
-                                fontSize: 12),
-                              ),
                             )),
-                            Container(
-                              padding: EdgeInsets.all(10),
-                              decoration: ShapeDecoration(
-                                shape: CircleBorder(),
-                                gradient: LinearGradient(
-                                    colors: signInGradients,
-                                    begin: Alignment.topLeft,
-                                    end: Alignment.bottomRight),
-                              ),
-                              child: ImageIcon(
-                                AssetImage("assets/ic_forward.png"),
-                                size: 40,
-                                color: Colors.white,
-                              ),
-                            ),
+                          ],
+                        ))
+                  ],
+                ),
+              ],
+            ),
+            Column(
+          children: <Widget>[
+            ///holds email header and inputField
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Stack(
+                  alignment: Alignment.bottomRight,
+                  children: <Widget>[
+                    InputWidgets(30.0, 0.0),
+                    Padding(
+                        padding: EdgeInsets.only(right: 50),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                                child: Padding(
+                              padding: EdgeInsets.only(top: 10),
+                            )),
                           ],
                         ))
                   ],
@@ -63,14 +59,14 @@ class Login extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: 50),
+              padding: EdgeInsets.only(bottom: 10),
             ),
-            roundedRectButton("Let's get Started", signInGradients, false),
-            roundedRectButton("Already Registered?", signUpGradients, false),
+            roundedRectButton("Login", signInGradients, false),
+            roundedRectButton("Create Account", signUpGradients, false),
           ],
         )
       ],
-    );
+    )]);
   }
 }
 
