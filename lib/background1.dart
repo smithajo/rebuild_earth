@@ -4,10 +4,17 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
+          new Stack(
+            alignment: Alignment.bottomCenter,
+            children: <Widget>[
+              Image.asset('assets/collaboration.jpg', width: MediaQuery.of(context).size.width/1.5,),
+              //WavyHeader(),
+            ],
+          ),
           Expanded(
             child: Container(
             ),
@@ -70,36 +77,7 @@ class WavyFooter extends StatelessWidget {
     );
   }
 }
-
-/*class CirclePink extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Transform.translate(
-      offset: Offset(-70.0, 90.0),
-      child: Material(
-        color: Colors.pink,
-        child: Padding(padding: EdgeInsets.all(120)),
-        shape: CircleBorder(side: BorderSide(color: Colors.white, width: 15.0)),
-      ),
-    );
-  }
-}
-
-class CircleYellow extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Transform.translate(
-      offset: Offset(0.0, 210.0),
-      child: Material(
-        color: Colors.yellow,
-        child: Padding(padding: EdgeInsets.all(140)),
-        shape: CircleBorder(side: BorderSide(color: Colors.white, width: 15.0)),
-      ),
-    );
-  }
-}
-*/
-class TopWaveClipper extends CustomClipper<Path> {
+/*class TopWaveClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     // This is where we decide what part of our image is going to be visible.
@@ -133,7 +111,7 @@ class TopWaveClipper extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
-}
+}*/
 
 class FooterWaveClipper extends CustomClipper<Path> {
   @override

@@ -51,7 +51,7 @@ class InputWidget2 extends StatelessWidget {
           color: Colors.white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(topRight),
+                  bottomRight: Radius.circular(0),
                   topRight: Radius.circular(0))),
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
@@ -86,12 +86,11 @@ class InputWidget3 extends StatelessWidget {
           color: Colors.white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(topRight),
+                  bottomRight: Radius.circular(0),
                   topRight: Radius.circular(0))),
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
-              obscureText: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Email",
@@ -121,12 +120,11 @@ class InputWidget4 extends StatelessWidget {
           color: Colors.white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(topRight),
+                  bottomRight: Radius.circular(0),
                   topRight: Radius.circular(0))),
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
-              obscureText: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Full Name",
@@ -156,12 +154,11 @@ class InputWidget5 extends StatelessWidget {
           color: Colors.white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(topRight),
+                  bottomRight: Radius.circular(0),
                   topRight: Radius.circular(0))),
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
-              obscureText: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Phone No.",

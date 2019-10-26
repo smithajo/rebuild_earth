@@ -17,7 +17,7 @@ class Register extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Stack(
-                  alignment: Alignment.bottomRight,
+                  
                   children: <Widget>[
                     InputWidget1(30.0, 0.0),
                     Padding(
@@ -41,7 +41,7 @@ class Register extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Stack(
-                  alignment: Alignment.bottomRight,
+                  
                   children: <Widget>[
                     InputWidget2(30.0, 0.0),
                     Padding(
@@ -65,7 +65,7 @@ class Register extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Stack(
-                  alignment: Alignment.bottomRight,
+                  
                   children: <Widget>[
                     InputWidget3(30.0, 0.0),
                     Padding(
@@ -89,7 +89,7 @@ class Register extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Stack(
-                  alignment: Alignment.bottomRight,
+                  
                   children: <Widget>[
                     InputWidget4(30.0, 0.0),
                     Padding(
@@ -113,7 +113,7 @@ class Register extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Stack(
-                  alignment: Alignment.bottomRight,
+                  
                   children: <Widget>[
                     InputWidget5(30.0, 0.0),
                     Padding(
