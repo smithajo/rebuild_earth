@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_bundle/inputWidget.dart';
-import 'package:flutter_ui_bundle/inputWidget.dart' as prefix0;
 import 'register.dart';
 class JsonUser {
   String username;
@@ -81,9 +80,10 @@ class Login extends StatelessWidget {
             ),
             
             GestureDetector(
-              onTap:() {
-                
-              },
+              onTap: () {
+                          SystemChannels.textInput.invokeMethod('TextInput.hide');
+                          requestLoginAPI(context, _userNameController.text, _passwordController.text);
+                        },
             child:  roundedRectButton("Login", signInGradients, false),
             ),
            GestureDetector(

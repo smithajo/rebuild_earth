@@ -1,21 +1,13 @@
-import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-
+import 'dart:async';
+import 'package:dio/dio.dart';
+import 'loginUi.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-Future<Post> fetchPost() async {
-  final response = await http.get(
-    'https://api.rebuildearth.org/api/token',
-    headers: {HttpHeaders.authorizationHeader: "access"},
-  );
-  final responseJson = json.decode(response.body);
 
-  return Post.fromJson(responseJson);
-}
-
-class Post {
+/*class Post {
   final String username;
   final String password;
 
@@ -28,14 +20,7 @@ class Post {
       password: json['password'],
     );
   }
-}
-
-
-class InputWidget extends StatelessWidget {
-  final double topRight;
-  final double bottomRight;
-  String value;
-  InputWidget(this.topRight, this.bottomRight);
+}*/
 
 class LoginWithRestfulApi extends StatefulWidget {
   @override
@@ -94,6 +79,20 @@ class _LoginWithRestfulApiState extends State<LoginWithRestfulApi> {
       }
     }
   }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
+  }}
+
+
+class InputWidget extends StatelessWidget {
+  final double topRight;
+  final double bottomRight;
+  String value;
+  InputWidget(this.topRight, this.bottomRight);
+  TextEditingController _userNameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -110,8 +109,7 @@ class _LoginWithRestfulApiState extends State<LoginWithRestfulApi> {
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
-             // onChanged: (),
-             controller: emailController,
+             controller: _userNameController,
               autofocus: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
@@ -132,7 +130,7 @@ class InputWidgets extends StatelessWidget {
   final double bottomRight;
 
   InputWidgets(this.topRight, this.bottomRight);
-
+  TextEditingController _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -151,6 +149,7 @@ class InputWidgets extends StatelessWidget {
             child: TextField(
               autofocus: true,
               obscureText: true,
+              controller: _passwordController,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Password",
@@ -162,3 +161,9 @@ class InputWidgets extends StatelessWidget {
     );
   }
 }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
+  }
