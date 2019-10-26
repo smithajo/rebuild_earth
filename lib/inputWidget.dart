@@ -56,6 +56,7 @@ class InputWidgets extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 20, top: 10, bottom: 10),
             child: TextField(
+              obscureText: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Password",

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_ui_bundle/background.dart';
-import 'package:flutter_ui_bundle/loginUi.dart';
+import 'package:flutter_ui_bundle/background1.dart';
+import 'package:flutter_ui_bundle/registerUI.dart';
 import 'package:http/http.dart' as http;
+import 'main.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -27,15 +28,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class MyHomePage1 extends StatefulWidget {
+  MyHomePage1({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Stack(
           children: <Widget>[
             Background(),
-            Login(),
+            Register(),
           ],
         ));
   }

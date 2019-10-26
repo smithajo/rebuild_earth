@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_bundle/inputWidget.dart';
-
+import 'register.dart';
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,12 @@ class Login extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 10),
             ),
             roundedRectButton("Login", signInGradients, false),
-            roundedRectButton("Create Account", signUpGradients, false),
+           GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyHomePage1()));
+            },
+            child:   roundedRectButton("Create Account", signUpGradients, false),
+          ),
           ],
         )
       ],
